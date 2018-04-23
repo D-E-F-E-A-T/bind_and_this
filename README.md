@@ -18,3 +18,10 @@ Note this is not like lexical scoping.
 
 ## Bind
 
+The `bind` keyword is to be used with a function and some object, to explicitly set the this object. It returns a function which has its this object set from the beginning.
+
+```
+const boundfunctionname = functionname.bind(object)
+```
+
+Whereever boundfunctioname is called, the this will always be the object set by the bind.
