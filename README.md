@@ -14,7 +14,7 @@ This keyword denotes an object that is not defined by lexical scope. It can be e
 
 1. Using the “new” keyword (also known as constructor hijacking) will make “this” use the newly created object as its value.
 2. myObject.someFunc(), will use myObject as the `this` object
-3. 
+3. apply and call:
 - someFunc.call(this, arg1, arg2,...) invokes the function with explicit this and arguments given as a list
 - someFunc.apply(this, [arg1, arg2,...]) invokes the function with explicit this and arguments given as an array.
 4. If none of the above is true, then the `this` keyword is set to the global object.
@@ -25,7 +25,11 @@ There are two exceptions as below:
 
 ### Exception 1: 'use strict'
 
+If the `use-strict` pragma is used, then when this references the global object, it will return `undefined`. 
+
 ### Exception 2: Arrow Functions
+
+Arrow functions cannot be bound to an object with `bind`. They also do not use the semantics above. Instead, they will always use the `this` of the enclosing context. 'use-strict' exception still applies.
 
 ## Bind
 
