@@ -1,10 +1,20 @@
-# Bind and this keyword
+# This and Bind keyword
 
-`bind()` and `this` are used together as part of creating and manipulating
+`this` and `bind()`  are used together as part of creating and manipulating
 objects.
 
-## Bind
 
 ## This
 
+This keyword can be explicitly set to an argument object or implied. It is determined at call time, by the call-site semantics. If it is not explicitly set, potentially by bind, then it is determined by the following rules.
+
+-
+-
+-
+-
+
+Note this is not like lexical scoping. 
+
+
+## Bind
 
