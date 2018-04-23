@@ -6,7 +6,7 @@ objects.
 
 ## This
 
-This keyword can be explicitly set to an argument object or implied. It is determined at call time, by the call-site semantics. If it is not explicitly set, potentially by bind, then it is determined by the following rules.
+This keyword denotes an object that is not defined by lexical scope. It can be explicitly set to an argument object or implied. It is determined at call time, by the call-site semantics. If it is not explicitly set, potentially by bind, then it is determined by the following rules.
 
 -
 -
@@ -24,4 +24,4 @@ The `bind` keyword is to be used with a function and some object, to explicitly 
 const boundfunctionname = functionname.bind(object)
 ```
 
-Whereever boundfunctioname is called, the this will always be the object set by the bind.
+Whereever `boundfunctioname` is called, the `this` object will always be the object set by the bind.
