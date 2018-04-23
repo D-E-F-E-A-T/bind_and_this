@@ -6,15 +6,26 @@ objects.
 
 ## This
 
-This keyword denotes an object that is not defined by lexical scope. It can be explicitly set to an argument object or implied. It is determined at call time, by the call-site semantics. If it is not explicitly set, potentially by bind, then it is determined by the following rules.
+This keyword denotes an object that is not defined by lexical scope. It can be explicitly set to an argument object or implied. It is determined at call time, by the call-site semantics, with some exceptions
 
--
--
--
--
+### Call-site rules
 
-Note this is not like lexical scoping. 
+`this` is determined by the following rules, not allowing for the exceptions.
 
+1. Using the “new” keyword (also known as constructor hijacking) will make “this” use the newly created object as its value.
+2. myObject.someFunc(), will use myObject as the `this` object
+3. 
+- someFunc.call(this, arg1, arg2,...) invokes the function with explicit this and arguments given as a list
+- someFunc.apply(this, [arg1, arg2,...]) invokes the function with explicit this and arguments given as an array.
+4. If none of the above is true, then the `this` keyword is set to the global object.
+
+Note this is not similar to lexical scoping.
+
+There are two exceptions as below:
+
+### Exception 1: 'use strict'
+
+### Exception 2: Arrow Functions
 
 ## Bind
 
