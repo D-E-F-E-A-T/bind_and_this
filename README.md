@@ -36,7 +36,7 @@ Arrow functions cannot be bound to an object with `bind`. They also do not use t
 The `bind` keyword is to be used with a function and some object, to explicitly set the this object. It returns a function which has its this object set from the beginning.
 
 ```
-const boundfunctionname = functionname.bind(object)
+const boundMyFunc = myFunc.bind(this_object)
 ```
 
-Whereever `boundfunctioname` is called, the `this` object will always be the object set by the bind.
+Whereever `boundMyFunc` is called, the `this` object will always be `this_object` set by the bind method called on the function `myFunc`.
