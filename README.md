@@ -39,4 +39,4 @@ The `bind` keyword is to be used with a function and some object, to explicitly 
 const boundMyFunc = myFunc.bind(this_object)
 ```
 
-Whereever `boundMyFunc` is called, the `this` object will always be `this_object` set by the bind method called on the function `myFunc`.
+Whereever `boundMyFunc` is called, the `this` object will always be `this_object`.
